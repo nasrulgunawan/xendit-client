@@ -3,7 +3,7 @@
 require_relative "lib/xendit/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "xendit"
+  spec.name = "xendit-client"
   spec.version = Xendit::VERSION
   spec.authors = ["Nasrul Gunawan"]
   spec.email = ["search.nasrul@gmail.com"]
