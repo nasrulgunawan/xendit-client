@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    xendit (0.1.0)
+    xendit-client (0.1.0)
       faraday (~> 2.7.2)
 
 GEM
@@ -16,10 +16,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  universal-darwin-22
 
 DEPENDENCIES
   rake (~> 13.0)
-  xendit!
+  xendit-client!
 
 BUNDLED WITH
    2.3.23
