@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "xendit/version"
-require_relative "xendit/api_client"
-require_relative "xendit/errors"
+require_relative 'xendit/resources'
 
 module Xendit
   class << self

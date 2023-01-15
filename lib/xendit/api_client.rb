@@ -1,11 +1,12 @@
 require 'faraday'
 require_relative 'json_serializer'
 require_relative 'response'
+require_relative 'errors'
 
 module Xendit
   class ApiClient
     class << self
-      def get(url, params)
+      def get(url, params = nil)
         conn = create_connection()
         response = conn.get(url, params)
         handle_response(response)
