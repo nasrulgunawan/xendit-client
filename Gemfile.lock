@@ -36,6 +36,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  ruby
   universal-darwin-22
 
 DEPENDENCIES
@@ -43,4 +44,4 @@ DEPENDENCIES
   xendit-client!
 
 BUNDLED WITH
-   2.3.23
+   2.3.6
