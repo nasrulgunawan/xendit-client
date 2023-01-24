@@ -2,10 +2,11 @@
 
 require_relative "xendit/version"
 require_relative 'xendit/resources'
+require_relative 'xendit/webhook'
 
 module Xendit
   class << self
-    attr_accessor :api_key
+    attr_accessor :api_key, :callback_verification_token
     attr_writer :base_url
 
     def base_url
