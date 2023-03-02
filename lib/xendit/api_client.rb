@@ -12,7 +12,7 @@ module Xendit
         handle_response(response)
       end
 
-      def post(url, body)
+      def post(url, body = {})
         conn = create_connection()
         response = conn.post(url, JSONSerializer.encode(body))
         handle_response(response)
