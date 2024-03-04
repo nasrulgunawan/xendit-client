@@ -19,10 +19,10 @@ module Xendit
       end
 
       private
-    
+
       def create_connection(additional_headers = {})
         if Xendit.api_key.nil? || Xendit.api_key == ""
-          raise "Please configure your API key" 
+          raise "Please configure your API key"
         end
 
         default_headers =  {
@@ -32,7 +32,7 @@ module Xendit
         }
 
         default_headers = default_headers.merge!(additional_headers) if additional_headers != {}
-        
+
         Faraday.new(
           url: Xendit.base_url,
           headers: default_headers

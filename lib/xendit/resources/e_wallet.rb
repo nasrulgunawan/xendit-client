@@ -2,7 +2,7 @@ require_relative '../api_client'
 
 module Xendit
   class EWallet
-    PATH = "ewallets".freeze
+    PATH = "ewallets/charges".freeze
 
     class << self
       def get_charge_status(charge_id)
@@ -10,7 +10,7 @@ module Xendit
       end
 
       def charge(body)
-        ApiClient.post "#{PATH}/charges", body
+        ApiClient.post PATH, body
       end
 
       def void_charge(charge_id)
