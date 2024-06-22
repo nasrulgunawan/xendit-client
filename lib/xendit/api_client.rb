@@ -6,14 +6,14 @@ require_relative 'errors'
 module Xendit
   class ApiClient
     class << self
-      def get(url, params = nil)
-        conn = create_connection()
+      def get(url, headers: {}, params: nil)
+        conn = create_connection(headers)
         response = conn.get(url, params)
         handle_response(response)
       end
 
-      def post(url, body = {})
-        conn = create_connection()
+      def post(url, headers: {}, body: {})
+        conn = create_connection(headers)
         response = conn.post(url, JSONSerializer.encode(body))
         handle_response(response)
       end

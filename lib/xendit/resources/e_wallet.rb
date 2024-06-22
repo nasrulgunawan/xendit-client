@@ -5,28 +5,28 @@ module Xendit
     PATH = "ewallets/charges".freeze
 
     class << self
-      def get_charge_status(charge_id)
-        ApiClient.get "#{PATH}/#{charge_id}"
+      def get_charge_status(charge_id, **opts)
+        ApiClient.get "#{PATH}/#{charge_id}", opts
       end
 
-      def charge(body)
-        ApiClient.post PATH, body
+      def charge(**opts)
+        ApiClient.post PATH, opts
       end
 
-      def void_charge(charge_id)
-        ApiClient.post "#{PATH}/#{charge_id}/void"
+      def void_charge(charge_id, **opts)
+        ApiClient.post "#{PATH}/#{charge_id}/void", opts
       end
 
-      def refund(charge_id, body)
-        ApiClient.post "#{PATH}/#{charge_id}/refunds", body
+      def refund(charge_id, **opts)
+        ApiClient.post "#{PATH}/#{charge_id}/refunds", opts
       end
 
-      def get_refund(charge_id, refund_id)
-        ApiClient.get "#{PATH}/#{charge_id}/refunds/#{refund_id}"
+      def get_refund(charge_id, refund_id, **opts)
+        ApiClient.get "#{PATH}/#{charge_id}/refunds/#{refund_id}", opts
       end
 
-      def list_refunds
-        ApiClient.get "#{PATH}/#{charge_id}/refunds"
+      def list_refunds(**opts)
+        ApiClient.get "#{PATH}/#{charge_id}/refunds", opts
       end
     end
   end
